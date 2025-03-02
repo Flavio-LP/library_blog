@@ -1,0 +1,32 @@
+<h1>New Book</h1>
+
+<%= form_with model: @book do |form| %>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :author %><br>
+    <%= form.text_area :author %>
+  </div>
+
+      <div>
+    <%= form.label :note %><br>
+    <%= form.number_field :note %>
+  </div>
+
+  <div>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+
+<% end %>
+
+<br>
+
+ <%= link_to "Books list", root_path, class: "back-link" %> 

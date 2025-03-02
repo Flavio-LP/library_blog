@@ -1,0 +1,60 @@
+/* Estilização geral da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 20px;
+    padding: 0;
+  }
+  
+  /* Título */
+  h1 {
+    text-align: center;
+    color: #007bff;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  /* Lista de livros */
+  ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  li {
+    background: white;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Links de títulos */
+  a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Botão Novo Livro */
+  .new-book-button {
+    display: block;
+    width: 200px;
+    text-align: center;
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .new-book-button:hover {
+    background-color: #218838;
+  }
