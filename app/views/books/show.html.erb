@@ -6,4 +6,8 @@
 
 <p><%= @book.description %></p>
 
-<%= link_to "Back to Books", root_path, class: "back-link" %>
+<%= link_to "Editar", edit_book_path(@book), class: "edit-link" %>
+
+<%= link_to "Voltar aos Livros", root_path, class: "back-link" %>
+
+<%= link_to "Deletar" , destroy_book_path%>
