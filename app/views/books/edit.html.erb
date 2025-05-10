@@ -1,0 +1,33 @@
+
+<h1> Edit Book </h1>
+
+<%= form_with model: @book do |form| %>
+
+    <%= puts @book%>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :author %>
+    <%= form.text_field :author %>
+  </div>
+
+  <div class="field">
+    <%= form.label :note %>
+    <%= form.text_area :note %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Update Book" %>
+  </div>
+<% end %>
+
+<%= link_to "Back to Books", books_path, class: "back-link" %>
