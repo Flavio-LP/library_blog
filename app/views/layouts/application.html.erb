@@ -25,6 +25,7 @@
     <%= stylesheet_link_tag "show_book", media: "all" if controller_name == "books" && action_name == "show" %>
 
     <%= javascript_importmap_tags %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload" %>
   </head>
 
   <body>

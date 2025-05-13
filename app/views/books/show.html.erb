@@ -1,13 +1,18 @@
-<h1><%= @book.title %></h1>
+<div class="book-container">
+  <h1><%= @book.title %></h1>
 
-<p><%= @book.author %></p>
+  <p><strong>Autor:</strong> <%= @book.author %></p>
+  <p><strong>Nota:</strong> <%= @book.note %></p>
+  <p><strong>Descrição:</strong> <%= @book.description %></p>
 
-<p><%= @book.note %></p>
-
-<p><%= @book.description %></p>
-
-<%= link_to "Editar", edit_book_path(@book), class: "edit-link" %>
-
-<%= link_to "Voltar aos Livros", root_path, class: "back-link" %>
-
-<%= link_to "Deletar" , destroy_book_path%>
+  <div class="actions">
+    <%= link_to "Editar", edit_book_path(@book), class: "edit-link" %>
+    <%= link_to "Voltar aos Livros", root_path, class: "back-link" %>
+     <form action="<%= book_path(@book) %>" method="post" class="delete-btn">
+              <input type="hidden" name="_method" value="update" >
+              <input type="hidden" name="_method" value="delete">
+              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+              <button type="submit" class="btn btn-danger btn-sm" data-confirm="Tem certeza?">Excluir</button>
+    </form>
+  </div>
+</div>

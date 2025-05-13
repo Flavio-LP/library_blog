@@ -1,5 +1,7 @@
 /* Estilo geral da página */
 body {
+    display: flex;
+    flex-direction: column;
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
     color: #333;

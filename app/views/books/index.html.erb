@@ -1,16 +1,16 @@
-
-
 <h1>Books</h1>
 
-<ul>
+<div class="books-grid">
   <% @books.each do |book| %>
-    <li>Title: <%=link_to book.title, book%></li>
-    <li>Author: <%= book.author %></li>
-    <li>Note: <%= book.note %></li>
-    <li>Description: <%= book.description %></li>
+    <div class="book-card">
+      <h2><%= link_to book.title, book %></h2>
+      <p><strong>Author:</strong> <%= book.author %></p>
+      <p><strong>Note:</strong> <%= book.note %></p>
+      <p><strong>Description:</strong> <%= book.description %></p>
+    </div>
   <% end %>
+</div>
 
-  <br>
-
- <%= link_to "New Book", new_book_path, class: "new-book-button" %> 
- 
+<div class="new-book-container">
+  <%= link_to "New Book", new_book_path, class: "new-book-button" %>
+</div>
